@@ -38,7 +38,7 @@ public class GazuaController {
     return "list";
   }
 	
-	@RequestMapping(value = "/list")
+	@RequestMapping(value = "/mypage")
 	public String myPage() {
 	  
 	  return "mypage";
