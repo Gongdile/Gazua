@@ -4,17 +4,19 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.team.gazue.vo.BoardVO;
 import com.team.gazue.vo.MemberVO;
 
-@Service
 public interface GazuaService {
 	
-	public List<MemberVO> selectList(String type) throws Exception;
+	public List<BoardVO> selectList(String type) throws Exception;
 	
-	public void insert(MemberVO vo) throws Exception;
+	public void insert(BoardVO vo) throws Exception;
 	
-	public void update(MemberVO vo) throws Exception;
+	public void update(BoardVO vo) throws Exception;
 	
 	public void delete(int seq) throws Exception;
+	
+	public BoardVO selectOne(int seq) throws Exception;
 	
 }
