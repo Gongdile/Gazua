@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.team.gazue.BoardMapper">
+
+	<select id="selectList" resultType="com.team.gazue.vo.BoardVO">
+		select *from board_db where
+		category = #{category}
+	</select>
+
+	<select id="selectOne" resultType="com.team.gazue.vo.BoardVO">
+		select *from board_db where seq = #{seq}
+	</select>
+
+	<insert id="insert">
+		insert into
+		board_db(category,p_name,p_detail,price,imgUrl)
+		values(#{category},#{p_name},#{p_detail},#{price},#{imgUrl})
+	</insert>
+
+	<update id="update">
+		update board_db set
+		category=#{category},p_name=#{p_name},p_detail=#{p_detail},price=#{price},imgUrl=#{imgUrl}
+		where seq = #{seq}
+	</update>
+
+	<delete id="delete">
+		delete from board_db where seq=#{seq}
+	</delete>
+
+</mapper>

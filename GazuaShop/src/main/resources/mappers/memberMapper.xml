@@ -8,5 +8,4 @@
 	<select id="selectList" resultType="com.team.gazue.vo.MemberVO">
 		select *from user_db
 	</select>
-
 </mapper>
